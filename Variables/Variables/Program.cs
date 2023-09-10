@@ -30,4 +30,20 @@ string Class = "Cat";
   dfsdfsdf
   sdfsdfsdf
   sdfsdf
- */ 
+ */
+
+
+int age = 0;
+
+age = 25;
+
+//age = "30";
+
+Console.WriteLine("My age is: " + age);
+
+byte myAge = 30;
+byte numberOfWorkers = 50;
+
+sbyte x = -10;
+
+long myAccount = 100000000000;
