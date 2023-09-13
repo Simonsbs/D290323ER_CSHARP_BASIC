@@ -195,4 +195,31 @@ Console.WriteLine("dblCasted: " + dblNumberCasted);
 Console.WriteLine("fromInt: " + fromInt);
 
 
-//Console.ReadKey();
+var someAge = 123;
+var someName = "Simon";
+var someWage = 123.456;
+var someDate = DateTime.Now;
+var someIsCool = false;
+
+var somethingUnknown = (byte)123;
+
+
+
+int age4 = 21;
+int minAgeToGetIn = 21;
+
+bool isAllowedIn = age4 == minAgeToGetIn;
+bool isNotAllowedIn = age4 != minAgeToGetIn;
+bool isBelowMinAge = age4 < minAgeToGetIn;
+bool isAboveMinAge = age4 > minAgeToGetIn;
+bool isAboveMinAge2 = minAgeToGetIn < age4;
+
+bool isBelowOrEqualFromMinAge = age4 <= minAgeToGetIn;
+bool isAboveOrEqualFromMinAge = age4 >= minAgeToGetIn;
+
+Console.WriteLine("isAllowedIn: " + isAllowedIn);
+Console.WriteLine("isNotAllowedIn: " + isNotAllowedIn);
+Console.WriteLine("isBelowMinAge: " + isBelowMinAge);
+Console.WriteLine("isAboveMinAge: " + isAboveMinAge);
+
+Console.ReadKey();
