@@ -205,7 +205,7 @@ var somethingUnknown = (byte)123;
 
 
 
-int age4 = 21;
+int age4 = 18;
 int minAgeToGetIn = 21;
 
 bool isAllowedIn = age4 == minAgeToGetIn;
@@ -221,5 +221,59 @@ Console.WriteLine("isAllowedIn: " + isAllowedIn);
 Console.WriteLine("isNotAllowedIn: " + isNotAllowedIn);
 Console.WriteLine("isBelowMinAge: " + isBelowMinAge);
 Console.WriteLine("isAboveMinAge: " + isAboveMinAge);
+
+// && - And
+// || - Or
+
+bool b3 = true && true; // true
+b3 = true && false;     // false
+b3 = false && true;     // false
+b3 = false && false;    // false
+
+bool b4 = true || true; // true
+b4 = true || false;     // true
+b4 = false || true;     // true
+b4 = false || false;    // false
+
+
+int age5 = 18;
+int minAge = 21;
+int maxAge = 60;
+
+//                     false      &&      true
+bool ageInRange = (age5 > minAge) && (age5 < maxAge);
+
+//                         true      &&      false
+bool ageOutOfRange = (age5 < minAge) && (age5 > maxAge);
+
+//                    true      ||      false
+ageOutOfRange = (age5 < minAge) || (age5 > maxAge);
+
+
+bool b8 = (isAllowedIn && b3) || (isNotAllowedIn && b4);
+
+bool isAgeLessThanMin = age5 < minAge;
+bool isAgeGreaterThanMax = age5 > maxAge;
+ageOutOfRange = isAgeLessThanMin || isAgeGreaterThanMax;
+
+
+bool t = !true; // false
+bool f = !false; // true
+
+bool ageOutOfRange2 = !ageInRange;
+
+           // !(true) -> false
+bool b9 = !(isAllowedIn && b3) || (isNotAllowedIn && b4);
+                                       // !true
+bool b10 = (isAllowedIn && b3) || (!isNotAllowedIn && b4);
+
+
+
+
+
+
+
+
+
 
 Console.ReadKey();
