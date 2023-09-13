@@ -168,4 +168,31 @@ Console.WriteLine(born.ToShortTimeString());
 DateTime now = DateTime.Now;
 
 
-Console.ReadKey();
+// will not work
+//string name2 = "Simon";
+//int name3 = "Bob";
+
+
+byte age2 = 100;
+int age3 = age2;
+
+Console.WriteLine("age2: " + age2);
+Console.WriteLine("age3: " + age3);
+
+long bigNumber = 88;
+int mediumNumber = (int)bigNumber;
+
+Console.WriteLine("big: " + bigNumber);
+Console.WriteLine("med: " + mediumNumber);
+
+
+double dblNumber = 123.9999999;
+int dblNumberCasted = (int)dblNumber;
+double fromInt = dblNumberCasted;
+
+Console.WriteLine("dbl: " + dblNumber);
+Console.WriteLine("dblCasted: " + dblNumberCasted);
+Console.WriteLine("fromInt: " + fromInt);
+
+
+//Console.ReadKey();
