@@ -262,17 +262,99 @@ bool f = !false; // true
 
 bool ageOutOfRange2 = !ageInRange;
 
-           // !(true) -> false
+// !(true) -> false
 bool b9 = !(isAllowedIn && b3) || (isNotAllowedIn && b4);
-                                       // !true
+// !true
 bool b10 = (isAllowedIn && b3) || (!isNotAllowedIn && b4);
 
 
+//Console.WriteLine("Please enter your age:");
+
+//string input = Console.ReadLine();
+
+////int age6 = int.Parse(input);
+//int age6 = 0;
+
+//bool parsedString = int.TryParse(input, out age6);
+
+//if (parsedString) {
+//	//int age6 = 60;
+//	int minAge2 = 18;
+//	int maxAge2 = 50;
+
+//	if (age6 > minAge2 && age6 < maxAge2) {
+//		Console.WriteLine("This is true");
+//		Console.WriteLine("Wow, your in the range");
+//	} else {
+//		Console.WriteLine("This is false");
+//		Console.WriteLine("Shame, your NOT in the range");
+//	}
+//} else {
+//	Console.WriteLine("Sorry, that is not a valid age");
+
+//}
+
+//Console.WriteLine("Im after the if");
+
+int age8 = 40;
+string name8 = "Jane";
+
+if (age8 > 60) {
+	Console.WriteLine("True Section");
+} else if (name8 == "Bob") {
+	Console.WriteLine("Is bob");
+} else if (name8 == "Joe") {
+	Console.WriteLine("is joe");
+} else if (name8 == "Jane") {
+	Console.WriteLine("is Jane");
+	if (age8 < 10) {
+		Console.WriteLine("jane is younger than 10");
+	} else if (age8 < 50) {
+		Console.WriteLine("jane is too young");
+	} else {
+		Console.WriteLine("jane's age is ok");
+	}
+} else if (name8 == "Simon") {
+	Console.WriteLine("is Simon");
+} else if (name8 == "Sam") {
+	Console.WriteLine("is Sam");
+} else {
+	Console.WriteLine("unknown name");
+}
+
+Console.WriteLine("Not the right age");
+
+
+string name9 = "Joe";
+
+switch (name9) {
+	case "Joe":
+		Console.WriteLine("im joe");
+
+		if (name9 == "Joe") {
+			Console.WriteLine("JOE IS THE KING!!!!");
+		}
+		break;
+	case "Jane":
+	case "Simon":
+		Console.WriteLine("Im simon or jane");
+		if (name9 == "Simon") {
+			Console.WriteLine("Only im the best");
+		} else {
+            Console.WriteLine("im just ok");
+        }
+		if (name9 == "Joe") {
+			Console.WriteLine("JOE IS THE KING!!!!");
+		}
+		break;
+	default:
+		Console.WriteLine("Someone else");
+		break;
+}
 
 
 
-
-
+Console.WriteLine("im the end");
 
 
 
