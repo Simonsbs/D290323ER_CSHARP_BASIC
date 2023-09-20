@@ -341,8 +341,8 @@ switch (name9) {
 		if (name9 == "Simon") {
 			Console.WriteLine("Only im the best");
 		} else {
-            Console.WriteLine("im just ok");
-        }
+			Console.WriteLine("im just ok");
+		}
 		if (name9 == "Joe") {
 			Console.WriteLine("JOE IS THE KING!!!!");
 		}
@@ -358,4 +358,37 @@ Console.WriteLine("im the end");
 
 
 
-Console.ReadKey();
+Console.WriteLine("Please enter your age:");
+string input = Console.ReadLine();
+int userAge = int.Parse(input);
+
+//if (userAge <= 18) {
+//	Console.WriteLine("You are very young");
+//} else if (userAge > 30 && userAge < 50) {
+//	Console.WriteLine("You are middle age");
+//} else if (userAge > 70) {
+//	Console.WriteLine("You are very old");
+//} else {
+//    Console.WriteLine("nice age");
+//}
+
+switch (userAge) {
+	case < 18:
+		Console.WriteLine("You are under 18");
+		break;
+	case > 70:
+		Console.WriteLine("You are over 70");
+		break;
+	case > 30:
+		Console.WriteLine("You are over 30");
+		break;
+	case < 50:
+		Console.WriteLine("You are under 50");
+		break;
+
+
+}
+
+Console.WriteLine("Next year you will be: " + (userAge + 1));
+
+//Console.ReadKey();
