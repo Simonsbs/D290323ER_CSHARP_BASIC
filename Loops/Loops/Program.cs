@@ -186,7 +186,7 @@ do {
 		row++;
 	}
 } while (range > 0);*/
-
+/*
 int s = 0;
 while (s < 10) {
 	//Console.WriteLine("......");
@@ -207,7 +207,102 @@ for (int i = topRange; i > 0; i--) {
 }
 
 Console.WriteLine("end..");
-
+*/
 // take the code above (the times table)
 // and convert it to a for loop
 
+/*
+while (true) { 
+	Console.WriteLine("enter a number:");
+	string input2 = Console.ReadLine();
+	int topRange = int.Parse(input2);
+
+	if (topRange < 0) {
+		break;
+	}
+
+	for (int row = 1; row <= topRange; row++) {
+		for (int col = 1; col <= topRange; col++) {
+			Console.Write((col * row) + "\t");
+
+			if (col > 4) {
+				break;
+			}
+		}
+
+		if (row > 6) {
+			break;
+		}
+
+		Console.WriteLine();
+	}
+}*/
+
+
+// DIE - Duplication is Evil
+// DRY - Don't Repeat Yourself
+
+
+/*returnType/void MethodName(int x, string joke, bool youOK) {
+	// code
+}*/
+
+
+using System.Collections.Generic;
+
+void SaySomething(string message) {
+	Console.WriteLine(message);
+	Console.WriteLine(message + "!");
+}
+
+SaySomething("Hello");
+SaySomething("Goodbye");
+
+
+
+
+
+/*
+Exercise1: Number Guessing Game
+Objective: Implement a number guessing game where the computer randomly selects a number between 1 and 100, and the user has to guess it.
+
+// Generate a random number between 1 and 100.
+Random random = new Random();
+int secretNumber = random.Next(1, 101);
+
+Steps:
+The computer should randomly select a number between 1 and 100.
+Prompt the user to enter a guess.
+If the user's guess is too high, display "Too high! Try again."
+If the user's guess is too low, display "Too low! Try again."
+If the user guesses the number, display "Congratulations! You've guessed the right number in [number of attempts] attempts."
+The game should continue until the user guesses the correct number.
+Bonus:
+
+Limit the user to a maximum of 10 attempts. If they don't guess the number within these attempts, reveal the number to them and end the game.
+*/
+
+
+
+/*
+
+Exercise: FizzBuzz with a Twist
+Objective: Implement the FizzBuzz program with a twist. Instead of the traditional rules, allow the user to set their own multiples and terms, then display the results.
+
+Traditional FizzBuzz: For numbers from 1 to 100:
+
+If the number is a multiple of 3, print "Fizz".
+If the number is a multiple of 5, print "Buzz".
+If the number is a multiple of both 3 and 5, print "FizzBuzz".
+Otherwise, print the number.
+FizzBuzz with a Twist Steps:
+
+Prompt the user for two integers (between 1 and 100) - these will replace the traditional 3 and 5.
+Prompt the user for two terms (words or phrases) - these will replace the traditional "Fizz" and "Buzz".
+For numbers from 1 to 100:
+If the number is a multiple of the first user-provided integer, print the first term.
+If the number is a multiple of the second user-provided integer, print the second term.
+If the number is a multiple of both integers, print both terms concatenated.
+Otherwise, print the number.
+ 
+ */
