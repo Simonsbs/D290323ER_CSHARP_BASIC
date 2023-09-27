@@ -83,7 +83,7 @@
 //} while (false);
 
 //Console.WriteLine("Hello from the end of the program");
-
+/*
 string input2 = "";
 int selection2 = 0;
 do {
@@ -136,7 +136,16 @@ do {
 
 Console.WriteLine("bye");
 
+// tab = "\t"
+// newline = "\n"
+// backslash = "\\"
+// quote = "\""
 
+/*
+1	2	3	4	5	
+11	22	33	44	55	
+111	222	333	444	555
+*/
 // Write a program that outputs the times table for numbers 1-10
 // as a bonus - allow the user to input the number of times
 // tables to output
@@ -147,3 +156,58 @@ Console.WriteLine("bye");
 4 8  12 16 20
 5 10 15 20 25
 */
+
+/*int range;
+do {
+	Console.WriteLine("Enter a value for the table:");
+    Console.WriteLine("(a negative value will exit)");
+
+	bool parsedOK;
+	do {
+		Console.WriteLine("enter a numeric value:");
+		string input2 = Console.ReadLine();
+		parsedOK = int.TryParse(input2, out range);
+		if (!parsedOK) {
+			Console.WriteLine("invalid input, try again");
+		}
+	} while (!parsedOK);
+
+	int row = 1;
+	while (row <= range) {
+		int col = 1;
+		while (col <= range) {
+			int result = col * row;
+
+			Console.Write(result + "\t");
+
+			col++;
+		}
+		Console.WriteLine();
+		row++;
+	}
+} while (range > 0);*/
+
+int s = 0;
+while (s < 10) {
+	//Console.WriteLine("......");
+
+	s++;
+}
+
+Console.WriteLine("Enter a number:");
+string input = Console.ReadLine();
+int topRange = int.Parse(input);
+
+for (int i = 0; i < topRange; i++) {
+	Console.WriteLine("for loop: " + i);
+}
+
+for (int i = topRange; i > 0; i--) {
+	Console.WriteLine("for loop: " + i);
+}
+
+Console.WriteLine("end..");
+
+// take the code above (the times table)
+// and convert it to a for loop
+
