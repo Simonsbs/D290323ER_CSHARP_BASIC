@@ -349,7 +349,7 @@ Otherwise, print the number.
  
  */
 
-void FizzBuzzLogic2(int max, int num1, string val1, int num2, string val2) {
+void FizzBuzzLogic2(int num1 = 3, string val1 = "Fizz", int num2 = 5, string val2 = "Buzz", int max = 100) {
 	for (int i = 1; i <= max ; i++) {
 		if (i % num2 == 0 && i % num1 == 0) {
 			Console.WriteLine(val1 + val2 + " (" + i + ")");
@@ -363,7 +363,7 @@ void FizzBuzzLogic2(int max, int num1, string val1, int num2, string val2) {
 	}
 }
 
-void FizzBuzzLogic(int max, int num1, string val1, int num2, string val2) {
+void FizzBuzzLogic(int num1, string val1, int num2, string val2, int max = 150) {
 	for (int i = 1; i <= max; i++) {
 		string result = "";
 
@@ -414,8 +414,16 @@ string secondWord = GetAWord(name2);
 
 Console.WriteLine("-------------------------------------");
 
-FizzBuzzLogic(limit, firstNumber, firstWord, secondNumber, secondWord);
+FizzBuzzLogic(firstNumber, firstWord, secondNumber, secondWord, limit);
 
 Console.WriteLine("-------------------------------------");
 
-FizzBuzzLogic2(limit, firstNumber, firstWord, secondNumber, secondWord);
+FizzBuzzLogic2(firstNumber, firstWord, secondNumber, secondWord);
+
+Console.WriteLine("-------------------------------------");
+
+FizzBuzzLogic2(firstNumber, firstWord, secondNumber, secondWord, limit);
+
+Console.WriteLine("-------------------------------------");
+
+FizzBuzzLogic2();
