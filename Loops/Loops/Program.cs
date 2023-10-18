@@ -248,15 +248,14 @@ while (true) {
 }*/
 
 
-using System.Collections.Generic;
 
-void SaySomething(string message) {
-	Console.WriteLine(message);
-	Console.WriteLine(message + "!");
-}
+//void SaySomething(string message) {
+//	Console.WriteLine(message);
+//	Console.WriteLine(message + "!");
+//}
 
-SaySomething("Hello");
-SaySomething("Goodbye");
+//SaySomething("Hello");
+//SaySomething("Goodbye");
 
 
 
@@ -281,8 +280,48 @@ Bonus:
 
 Limit the user to a maximum of 10 attempts. If they don't guess the number within these attempts, reveal the number to them and end the game.
 */
+/*
+
+Random random = new Random();
+int secretNumber = random.Next(1, 101);
+
+Console.WriteLine("Welcome to my game");
+Console.WriteLine("Try to guess my number between 1 and 100");
+Console.WriteLine("------------------------------------------");
+
+int numberOfAttempts = 0;
+const int maxAttempts = 10;
+
+while (true) {
+	Console.WriteLine("Enter your guess:");
+	string input = Console.ReadLine();
+	int guess = 0;
+
+	if (!int.TryParse(input, out guess) || guess < 1 || guess > 100) {
+		Console.WriteLine("Sorry, not a valid value, please try again");
+		continue;
+	}
+
+	numberOfAttempts++;
+
+	if (guess > secretNumber) {
+		Console.WriteLine("Wrong! your guess is too high");
+	} else if (guess < secretNumber) {
+		Console.WriteLine("Wrong! your guess is too low");
+	} else {
+        Console.WriteLine("Congratulations, you guessed it in " + numberOfAttempts + " tries");
+		break;
+    }
 
 
+	if (numberOfAttempts > maxAttempts) {
+        Console.WriteLine("You have tried too many times, sorry, goodbye.");
+        Console.WriteLine("the correct answer was: " + secretNumber);
+        break;
+    }
+}
+
+Console.WriteLine("End of game");*/
 
 /*
 
@@ -295,6 +334,9 @@ If the number is a multiple of 3, print "Fizz".
 If the number is a multiple of 5, print "Buzz".
 If the number is a multiple of both 3 and 5, print "FizzBuzz".
 Otherwise, print the number.
+
+
+
 FizzBuzz with a Twist Steps:
 
 Prompt the user for two integers (between 1 and 100) - these will replace the traditional 3 and 5.
@@ -306,3 +348,74 @@ If the number is a multiple of both integers, print both terms concatenated.
 Otherwise, print the number.
  
  */
+
+void FizzBuzzLogic2(int max, int num1, string val1, int num2, string val2) {
+	for (int i = 1; i <= max ; i++) {
+		if (i % num2 == 0 && i % num1 == 0) {
+			Console.WriteLine(val1 + val2 + " (" + i + ")");
+		} else if (i % num1 == 0) {
+			Console.WriteLine(val1 + " (" + i + ")");
+		} else if (i % num2 == 0) {
+			Console.WriteLine(val2 + " (" + i + ")");
+		} else {
+			Console.WriteLine(i);
+		}
+	}
+}
+
+void FizzBuzzLogic(int max, int num1, string val1, int num2, string val2) {
+	for (int i = 1; i <= max; i++) {
+		string result = "";
+
+		if (i % num1 == 0) {
+			result = val1;
+		}
+
+		if (i % num2 == 0) {
+			result += val2;
+		}
+
+		if (result == "") {
+			result = i.ToString();
+		}
+
+		Console.WriteLine(result);
+	}
+}
+
+int GetANumber(string name) {
+	Console.WriteLine("Enter the " + name + " number:");
+	string input = Console.ReadLine();
+	int result = 0;
+	if (int.TryParse(input, out result)) {
+		return result;
+	}
+
+	Console.WriteLine("Invalid input, setting to 0");
+
+	return 0;
+}
+
+string GetAWord(string name) {
+	Console.WriteLine("Enter the " + name + " word:");
+	return Console.ReadLine();
+}
+
+const string name1 = "first";
+const string name2 = "second";
+
+int limit = GetANumber("upper limit");
+
+int firstNumber = GetANumber(name1);
+int secondNumber = GetANumber(name2);
+
+string firstWord = GetAWord(name1);
+string secondWord = GetAWord(name2);
+
+Console.WriteLine("-------------------------------------");
+
+FizzBuzzLogic(limit, firstNumber, firstWord, secondNumber, secondWord);
+
+Console.WriteLine("-------------------------------------");
+
+FizzBuzzLogic2(limit, firstNumber, firstWord, secondNumber, secondWord);
