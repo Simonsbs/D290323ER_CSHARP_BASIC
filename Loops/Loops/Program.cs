@@ -427,3 +427,51 @@ FizzBuzzLogic2(firstNumber, firstWord, secondNumber, secondWord, limit);
 Console.WriteLine("-------------------------------------");
 
 FizzBuzzLogic2();
+
+
+
+/* Exercises:
+
+1. Basic Price Calculation:
+
+Write a method named CalculatePrice that:
+
+Takes in the number of books purchased by a customer.
+Each book costs $10.
+Returns the total cost.
+
+decimal CalculatePrice(int numberOfBooks) {
+    // Your code here
+}
+
+
+
+2. Applying Discounts:
+
+Write a method named ApplyDiscount that:
+
+Takes in the original price.
+Takes an optional discount parameter. If no discount is provided, use a default discount of 5%.
+Returns the price after applying the discount.
+
+decimal ApplyDiscount(decimal originalPrice, decimal discountPercentage = 0.05M) {
+    // Your code here
+}
+
+
+3. Printing Purchase Summary:
+
+Write a method named PrintSummary that:
+
+Takes in the number of books.
+Calls CalculatePrice to get the original price.
+Calls ApplyDiscount to get the discounted price.
+Prints out the number of books, the original price, the discount applied, and the final price.
+
+void PrintSummary(int numberOfBooks){
+    // Your code here
+}
+
+
+
+*/
