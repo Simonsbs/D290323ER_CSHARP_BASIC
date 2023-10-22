@@ -556,12 +556,7 @@ Console.WriteLine("age: " + age);
 */
 
 
-using System.Runtime.InteropServices;
-///*
-///*
-///*
-///*
-///*
+// String manipulations
 string val = "Hello World!";
 string upper = val.ToUpper();
 Console.WriteLine(upper);
