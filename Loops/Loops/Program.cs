@@ -449,7 +449,6 @@ Returns the total cost.
 //Console.WriteLine("5 books cost: " + response);
 
 
-///*
 //2. Applying Discounts:
 
 //Write a method named ApplyDiscount that:
@@ -480,7 +479,6 @@ Returns the total cost.
 //response = ApplyDiscount(1000, 0.60M);
 //Console.WriteLine("Discount of 60% on 1000$ is: " + response);
 
-///*
 //3. Printing Purchase Summary:
 
 //Write a method named PrintSummary that:
@@ -515,19 +513,83 @@ Returns the total cost.
 //PrintSummary(14);
 
 
-using System.Xml.Linq;
-///*
-///*
-void DisplayPerson(string firstName, string lastName, int age) {
-	Console.WriteLine("Name: " + firstName + " " + lastName + " age: " + age); ;
-}
+//void DisplayPerson(string firstName, string lastName, int age) {
+//	Console.WriteLine("Name: " + firstName + " " + lastName + " age: " + age); ;
+//}
 
-DisplayPerson("Simon", "Stirling", 30);
+//DisplayPerson("Simon", "Stirling", 30);
 
-DisplayPerson(age: 20, firstName: "Bob", lastName: "Smith");
+//DisplayPerson(age: 20, firstName: "Bob", lastName: "Smith");
+
+//1. Create a method DisplayProduct with parameters for name, price, and quantity. 
+//   Call this method using named parameters.
+
+//*/
+
+//void DisplayProduct(string name, decimal price, int quantity) {
+//	Console.WriteLine("name: " + name);
+//	Console.WriteLine("price: " + price);
+//	Console.WriteLine("quantity: " + quantity);
+//}
+
+//DisplayProduct("Product 1", 123.0M, 10);
+//DisplayProduct(quantity: 10, price: 111.0M, name: "Product 2");
+//DisplayProduct(name: "Product 3", price: 33.0M, quantity: 10);
 
 /*
-1. Create a method DisplayProduct with parameters for name, price, and quantity. 
-   Call this method using named parameters.
+bool GetPersonInfo(out string firstName, out string lastName, out int age) {
+	firstName = "Simon";
+	lastName = "Stirling";
+	age = 30;
 
+	return true;
+}
+
+string fName = "Bob";
+string lName = "Smith";
+int age = 20;
+
+GetPersonInfo(out fName, out lName, out age);
+Console.WriteLine("fname: " + fName);
+Console.WriteLine("lname: " + lName);
+Console.WriteLine("age: " + age);
 */
+
+
+using System.Runtime.InteropServices;
+///*
+///*
+///*
+///*
+///*
+string val = "Hello World!";
+string upper = val.ToUpper();
+Console.WriteLine(upper);
+string lower = val.ToLower();
+Console.WriteLine(lower);
+bool contains = val.Contains("Hello");
+Console.WriteLine(contains);
+contains = val.Contains("hello");
+Console.WriteLine(contains);
+string newVal = val.Replace("Hello", "Goodbye");
+Console.WriteLine(newVal);
+string val2 = " from simon";
+
+newVal = val + val2;
+Console.WriteLine(newVal);
+
+
+string fName = "Simon";
+string lName = "Stirling";
+int age = 20;
+
+
+Console.WriteLine("the persons name is: " + fName + " " + lName + " and his age is: " + age);
+Console.WriteLine(string.Format("the persons name is: {0} {1} and {0}'s age is: {2}", fName, lName, age));
+Console.WriteLine($"the persons name is: {fName} {lName} and {fName}'s age is: {age}");
+
+if (fName.ToUpper() == "SIMON") {
+    Console.WriteLine("Im Simon");
+} else {
+    Console.WriteLine("Im not Simon");
+}
