@@ -349,84 +349,84 @@ Otherwise, print the number.
  
  */
 
-void FizzBuzzLogic2(int num1 = 3, string val1 = "Fizz", int num2 = 5, string val2 = "Buzz", int max = 100) {
-	for (int i = 1; i <= max ; i++) {
-		if (i % num2 == 0 && i % num1 == 0) {
-			Console.WriteLine(val1 + val2 + " (" + i + ")");
-		} else if (i % num1 == 0) {
-			Console.WriteLine(val1 + " (" + i + ")");
-		} else if (i % num2 == 0) {
-			Console.WriteLine(val2 + " (" + i + ")");
-		} else {
-			Console.WriteLine(i);
-		}
-	}
-}
+//void FizzBuzzLogic2(int num1 = 3, string val1 = "Fizz", int num2 = 5, string val2 = "Buzz", int max = 100) {
+//	for (int i = 1; i <= max ; i++) {
+//		if (i % num2 == 0 && i % num1 == 0) {
+//			Console.WriteLine(val1 + val2 + " (" + i + ")");
+//		} else if (i % num1 == 0) {
+//			Console.WriteLine(val1 + " (" + i + ")");
+//		} else if (i % num2 == 0) {
+//			Console.WriteLine(val2 + " (" + i + ")");
+//		} else {
+//			Console.WriteLine(i);
+//		}
+//	}
+//}
 
-void FizzBuzzLogic(int num1, string val1, int num2, string val2, int max = 150) {
-	for (int i = 1; i <= max; i++) {
-		string result = "";
+//void FizzBuzzLogic(int num1, string val1, int num2, string val2, int max = 150) {
+//	for (int i = 1; i <= max; i++) {
+//		string result = "";
 
-		if (i % num1 == 0) {
-			result = val1;
-		}
+//		if (i % num1 == 0) {
+//			result = val1;
+//		}
 
-		if (i % num2 == 0) {
-			result += val2;
-		}
+//		if (i % num2 == 0) {
+//			result += val2;
+//		}
 
-		if (result == "") {
-			result = i.ToString();
-		}
+//		if (result == "") {
+//			result = i.ToString();
+//		}
 
-		Console.WriteLine(result);
-	}
-}
+//		Console.WriteLine(result);
+//	}
+//}
 
-int GetANumber(string name) {
-	Console.WriteLine("Enter the " + name + " number:");
-	string input = Console.ReadLine();
-	int result = 0;
-	if (int.TryParse(input, out result)) {
-		return result;
-	}
+//int GetANumber(string name) {
+//	Console.WriteLine("Enter the " + name + " number:");
+//	string input = Console.ReadLine();
+//	int result = 0;
+//	if (int.TryParse(input, out result)) {
+//		return result;
+//	}
 
-	Console.WriteLine("Invalid input, setting to 0");
+//	Console.WriteLine("Invalid input, setting to 0");
 
-	return 0;
-}
+//	return 0;
+//}
 
-string GetAWord(string name) {
-	Console.WriteLine("Enter the " + name + " word:");
-	return Console.ReadLine();
-}
+//string GetAWord(string name) {
+//	Console.WriteLine("Enter the " + name + " word:");
+//	return Console.ReadLine();
+//}
 
-const string name1 = "first";
-const string name2 = "second";
+//const string name1 = "first";
+//const string name2 = "second";
 
-int limit = GetANumber("upper limit");
+//int limit = GetANumber("upper limit");
 
-int firstNumber = GetANumber(name1);
-int secondNumber = GetANumber(name2);
+//int firstNumber = GetANumber(name1);
+//int secondNumber = GetANumber(name2);
 
-string firstWord = GetAWord(name1);
-string secondWord = GetAWord(name2);
+//string firstWord = GetAWord(name1);
+//string secondWord = GetAWord(name2);
 
-Console.WriteLine("-------------------------------------");
+//Console.WriteLine("-------------------------------------");
 
-FizzBuzzLogic(firstNumber, firstWord, secondNumber, secondWord, limit);
+//FizzBuzzLogic(firstNumber, firstWord, secondNumber, secondWord, limit);
 
-Console.WriteLine("-------------------------------------");
+//Console.WriteLine("-------------------------------------");
 
-FizzBuzzLogic2(firstNumber, firstWord, secondNumber, secondWord);
+//FizzBuzzLogic2(firstNumber, firstWord, secondNumber, secondWord);
 
-Console.WriteLine("-------------------------------------");
+//Console.WriteLine("-------------------------------------");
 
-FizzBuzzLogic2(firstNumber, firstWord, secondNumber, secondWord, limit);
+//FizzBuzzLogic2(firstNumber, firstWord, secondNumber, secondWord, limit);
 
-Console.WriteLine("-------------------------------------");
+//Console.WriteLine("-------------------------------------");
 
-FizzBuzzLogic2();
+//FizzBuzzLogic2();
 
 
 
@@ -439,39 +439,95 @@ Write a method named CalculatePrice that:
 Takes in the number of books purchased by a customer.
 Each book costs $10.
 Returns the total cost.
+*/
+//decimal CalculatePrice(int numberOfBooks) {
+//    return numberOfBooks * 10; 
+//}
 
-decimal CalculatePrice(int numberOfBooks) {
-    // Your code here
+//decimal response = CalculatePrice(5);
+
+//Console.WriteLine("5 books cost: " + response);
+
+
+///*
+//2. Applying Discounts:
+
+//Write a method named ApplyDiscount that:
+
+//Takes in the original price.
+//Takes an optional discount parameter. If no discount is provided, use a default discount of 5%.
+//Returns the price after applying the discount.
+//*/
+
+//decimal ApplyDiscount(decimal originalPrice, decimal discountPercentage = 0.05M) {
+//	if (discountPercentage > 0.5M) {
+//        Console.WriteLine("Too much discount, not allowed");
+//		return originalPrice;
+//		//discountPercentage = 0.5M;
+//    }
+
+//	decimal totalPercentage = 1 - discountPercentage;
+//	decimal result = originalPrice * totalPercentage;
+//	return result;
+//}
+
+//response = ApplyDiscount(100);
+//Console.WriteLine("Discount of 5% on 100$ is: " + response);
+//response = ApplyDiscount(200, 0.10M);
+//Console.WriteLine("Discount of 10% on 200$ is: " + response);
+//response = ApplyDiscount(500, 0.30M);
+//Console.WriteLine("Discount of 30% on 500$ is: " + response);
+//response = ApplyDiscount(1000, 0.60M);
+//Console.WriteLine("Discount of 60% on 1000$ is: " + response);
+
+///*
+//3. Printing Purchase Summary:
+
+//Write a method named PrintSummary that:
+
+//Takes in the number of books.
+//Calls CalculatePrice to get the original price.
+//Calls ApplyDiscount to get the discounted price.
+//Prints out the number of books, the original price, the discount applied, and the final price.
+//*/
+
+//void PrintSummary(int numberOfBooks){
+//    decimal totalPrice = CalculatePrice(numberOfBooks);
+//	decimal discount = 0.05M;
+//	if (numberOfBooks > 10) {
+//		discount = 0.12M;
+//	} else if (numberOfBooks > 5) {
+//		discount = 0.11M;
+//	}
+//	decimal discountedPrice = ApplyDiscount(totalPrice, discount);
+
+//	Console.WriteLine("-----------------------------------");
+//    Console.WriteLine("Number of books: " + numberOfBooks);
+//	Console.WriteLine("Price before discount: " + totalPrice + "$");
+//	Console.WriteLine("the discount amount is: " + (discount * 100) + "%");
+//	Console.WriteLine("Price after discount: " + discountedPrice + "$");
+
+//	Console.WriteLine("-----------------------------------");
+//}
+
+//PrintSummary(3);
+//PrintSummary(6);
+//PrintSummary(14);
+
+
+using System.Xml.Linq;
+///*
+///*
+void DisplayPerson(string firstName, string lastName, int age) {
+	Console.WriteLine("Name: " + firstName + " " + lastName + " age: " + age); ;
 }
 
+DisplayPerson("Simon", "Stirling", 30);
 
+DisplayPerson(age: 20, firstName: "Bob", lastName: "Smith");
 
-2. Applying Discounts:
-
-Write a method named ApplyDiscount that:
-
-Takes in the original price.
-Takes an optional discount parameter. If no discount is provided, use a default discount of 5%.
-Returns the price after applying the discount.
-
-decimal ApplyDiscount(decimal originalPrice, decimal discountPercentage = 0.05M) {
-    // Your code here
-}
-
-
-3. Printing Purchase Summary:
-
-Write a method named PrintSummary that:
-
-Takes in the number of books.
-Calls CalculatePrice to get the original price.
-Calls ApplyDiscount to get the discounted price.
-Prints out the number of books, the original price, the discount applied, and the final price.
-
-void PrintSummary(int numberOfBooks){
-    // Your code here
-}
-
-
+/*
+1. Create a method DisplayProduct with parameters for name, price, and quantity. 
+   Call this method using named parameters.
 
 */
