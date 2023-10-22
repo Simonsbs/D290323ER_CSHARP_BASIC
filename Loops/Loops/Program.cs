@@ -557,34 +557,87 @@ Console.WriteLine("age: " + age);
 
 
 // String manipulations
-string val = "Hello World!";
-string upper = val.ToUpper();
-Console.WriteLine(upper);
-string lower = val.ToLower();
-Console.WriteLine(lower);
-bool contains = val.Contains("Hello");
-Console.WriteLine(contains);
-contains = val.Contains("hello");
-Console.WriteLine(contains);
-string newVal = val.Replace("Hello", "Goodbye");
-Console.WriteLine(newVal);
-string val2 = " from simon";
+//string val = "Hello World!";
+//string upper = val.ToUpper();
+//Console.WriteLine(upper);
+//string lower = val.ToLower();
+//Console.WriteLine(lower);
+//bool contains = val.Contains("Hello");
+//Console.WriteLine(contains);
+//contains = val.Contains("hello");
+//Console.WriteLine(contains);
+//string newVal = val.Replace("Hello", "Goodbye");
+//Console.WriteLine(newVal);
+//string val2 = " from simon";
 
-newVal = val + val2;
-Console.WriteLine(newVal);
-
-
-string fName = "Simon";
-string lName = "Stirling";
-int age = 20;
+//newVal = val + val2;
+//Console.WriteLine(newVal);
 
 
-Console.WriteLine("the persons name is: " + fName + " " + lName + " and his age is: " + age);
-Console.WriteLine(string.Format("the persons name is: {0} {1} and {0}'s age is: {2}", fName, lName, age));
-Console.WriteLine($"the persons name is: {fName} {lName} and {fName}'s age is: {age}");
+//string fName = "Simon";
+//string lName = "Stirling";
+//int age = 20;
 
-if (fName.ToUpper() == "SIMON") {
-    Console.WriteLine("Im Simon");
-} else {
-    Console.WriteLine("Im not Simon");
-}
+
+//Console.WriteLine("the persons name is: " + fName + " " + lName + " and his age is: " + age);
+//Console.WriteLine(string.Format("the persons name is: {0} {1} and {0}'s age is: {2}", fName, lName, age));
+//Console.WriteLine($"the persons name is: {fName} {lName} and {fName}'s age is: {age}");
+
+//if (fName.ToUpper() == "SIMON") {
+//    Console.WriteLine("Im Simon");
+//} else {
+//    Console.WriteLine("Im not Simon");
+//}
+
+
+// Creating objects
+
+using Loops;
+
+Employee e1 = new Employee("Jane", "Smith", 10);
+//e1.age = 22;
+//e1.firstName = "Simon";
+//e1.lastName = "Stirling";
+e1.eyeColor = "Blue";
+
+Employee e2 = new Employee("Timmy", "Doe", 5);
+//e2.age = 33;
+//e2.firstName = "Bob";
+//e2.lastName = "Smith";
+e2.eyeColor = "Green";
+
+e1.PrintName();
+e2.PrintName();
+
+e1.firstName = "Joe";
+e2.lastName = "Piscapoe";
+
+e1.PrintName();
+e2.PrintName();
+
+
+/*
+
+1. Create a BankAccount Class:
+
+Create a new class named BankAccount.
+Define the following public fields in the BankAccount class:
+string accountHolderName
+decimal balance
+
+Define a constructor for the BankAccount class that accepts parameters for AccountHolderName and Balance, and initializes the respective fields.
+Define the following public methods in the BankAccount class:
+void Deposit(decimal amount): This method should add the amount to the Balance.
+bool Withdraw(decimal amount): This method should check if amount can be withdrawn (i.e., amount <= Balance). If so, it should subtract amount from Balance and return true. Otherwise, it should return false.
+void DisplayAccountInfo(): This method should display the AccountHolderName and Balance to the console.
+
+2. Test Your BankAccount Class:
+
+In the Main method of your program:
+Create a new instance of the BankAccount class, initializing it with a name and a balance.
+Call the Deposit method to deposit some money into the account.
+Call the Withdraw method to withdraw some money from the account. Check the return value to see if the withdrawal was successful and, if so, display a success message to the console.
+Call the DisplayAccountInfo method to display the account information to the console.
+ 
+
+*/
