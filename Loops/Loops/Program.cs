@@ -1,4 +1,6 @@
-﻿//int counter = 1000;
+﻿
+
+//int counter = 1000;
 
 //while (counter > 1) {
 
@@ -615,6 +617,12 @@ e2.lastName = "Piscapoe";
 e1.PrintName();
 e2.PrintName();
 
+string response = "NOTHING";
+
+bool result = e1.Shout(out response);
+
+
+
 
 /*
 
@@ -641,3 +649,23 @@ Call the DisplayAccountInfo method to display the account information to the con
  
 
 */
+
+
+BankAccount ba1 = new BankAccount("Simon Stirling", 955555);
+BankAccount ba2 = new BankAccount("Joe Smith", 500);
+BankAccount ba3 = new BankAccount("Bob Marley", 1000);
+
+
+ba1.DisplayAccountInfo();
+ba1.Deposit(100);
+ba1.Withdraw(300);
+ba1.DisplayAccountInfo();
+
+
+if (ba2.Withdraw(10000)) {
+    Console.WriteLine("Got the money");
+} else {
+    Console.WriteLine("Not enough funds");
+}
+
+Console.ReadLine();

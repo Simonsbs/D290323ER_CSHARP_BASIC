@@ -18,6 +18,12 @@
             Console.WriteLine("Created a new Employee");
         }
 
+		public bool Shout(out string words) {
+
+			words = "IM HAPPY!!!";
+
+			return true;
+		}
 
 		public void PrintName() {
             Console.WriteLine($"{this.firstName} {this.lastName} age: {this.age}");
