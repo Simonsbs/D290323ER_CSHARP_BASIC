@@ -655,12 +655,18 @@ BankAccount ba1 = new BankAccount("Simon Stirling", 955555);
 BankAccount ba2 = new BankAccount("Joe Smith", 500);
 BankAccount ba3 = new BankAccount("Bob Marley", 1000);
 
+ba1.AccountHolderName = "SIMON IS COOL!!!";
+ba1.balance = 500;
+
+
+Console.WriteLine(ba1.AccountHolderName);
+Console.WriteLine(ba1.balance);
+
 
 ba1.DisplayAccountInfo();
 ba1.Deposit(100);
 ba1.Withdraw(300);
 ba1.DisplayAccountInfo();
-
 
 if (ba2.Withdraw(10000)) {
     Console.WriteLine("Got the money");
