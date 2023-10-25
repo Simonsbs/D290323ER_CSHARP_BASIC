@@ -650,28 +650,51 @@ Call the DisplayAccountInfo method to display the account information to the con
 
 */
 
+//BankAccount.bankID = 123;
+//BankAccount.bankName = "My Bank";
+
 
 BankAccount ba1 = new BankAccount("Simon Stirling", 955555);
 BankAccount ba2 = new BankAccount("Joe Smith", 500);
 BankAccount ba3 = new BankAccount("Bob Marley", 1000);
 
-ba1.AccountHolderName = "SIMON IS COOL!!!";
-ba1.balance = 500;
+BankAccount.GetName();
+BankAccount.SetName("SOME NEW NAME");
+BankAccount.BankName = "SOME NEW NAME";
+Console.WriteLine(BankAccount.BankName);
+
+MyFunctions.Add(1, 3);
+MyFunctions.Sqr(100);
+
+//ba1.AccountHolderName = "SIMON IS COOL!!!";
+//ba1.SetAccountHolderName("SIMON IS COOL!!!");
+
+//ba1.balance = 500;
 
 
-Console.WriteLine(ba1.AccountHolderName);
-Console.WriteLine(ba1.balance);
 
+//Console.WriteLine(ba1.AccountHolderName);
+//Console.WriteLine(ba1.GetAccountHolderName());
+//Console.WriteLine(ba1.balance);
+
+//ba1.AccountHolderName = "joe";
+
+//ba1.DisplayAccountInfo();
+//ba1.Deposit(100);
+//ba1.Withdraw(300);
+//ba1.DisplayAccountInfo();
+
+//if (ba2.Withdraw(10000)) {
+//    Console.WriteLine("Got the money");
+//} else {
+//    Console.WriteLine("Not enough funds");
+//}
+
+//BankAccount.bankName = "My New Bank";
 
 ba1.DisplayAccountInfo();
-ba1.Deposit(100);
-ba1.Withdraw(300);
-ba1.DisplayAccountInfo();
+ba2.DisplayAccountInfo();
+ba3.DisplayAccountInfo();
 
-if (ba2.Withdraw(10000)) {
-    Console.WriteLine("Got the money");
-} else {
-    Console.WriteLine("Not enough funds");
-}
 
 Console.ReadLine();
