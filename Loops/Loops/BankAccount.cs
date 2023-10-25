@@ -6,6 +6,21 @@
 		public static string bankName;
 		public static int bankID;
 
+		public BankAccount() {
+			this.balance = 0;
+			this.accountHolderName = "UNKNOWN";
+		}
+		
+		public BankAccount(string accountHolderName) {
+			this.accountHolderName = accountHolderName;
+			this.balance = 0;
+		}
+
+		public BankAccount(decimal balance) {
+			this.accountHolderName = "UNKNOWN";
+			this.balance = balance;
+		}
+
 		public BankAccount(string accountHolderName, decimal balance) {
 			this.balance = balance;
 			this.accountHolderName = accountHolderName;
@@ -14,7 +29,7 @@
 		static BankAccount() {
 			bankName = "INIT BANK NAME";
 			bankID = 0;
-		
+
 		}
 
 		public string AccountHolderName {
@@ -61,6 +76,16 @@
 			}
 		}
 
+
+		public int Add(int a, int b) {
+			return a + b;
+		}
+		public int Add(int a, int b, int c) {
+			return Add(a, b) + c;
+		}
+		public int Add(int a, int b, int c, int d) {
+			return Add(a, b, c) + d;
+		}
 
 
 		public void Deposit(decimal amount) {

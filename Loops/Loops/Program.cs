@@ -596,30 +596,30 @@ Console.WriteLine("age: " + age);
 
 using Loops;
 
-Employee e1 = new Employee("Jane", "Smith", 10);
-//e1.age = 22;
-//e1.firstName = "Simon";
-//e1.lastName = "Stirling";
-e1.eyeColor = "Blue";
+//Employee e1 = new Employee("Jane", "Smith", 10);
+////e1.age = 22;
+////e1.firstName = "Simon";
+////e1.lastName = "Stirling";
+//e1.eyeColor = "Blue";
 
-Employee e2 = new Employee("Timmy", "Doe", 5);
-//e2.age = 33;
-//e2.firstName = "Bob";
-//e2.lastName = "Smith";
-e2.eyeColor = "Green";
+//Employee e2 = new Employee("Timmy", "Doe", 5);
+////e2.age = 33;
+////e2.firstName = "Bob";
+////e2.lastName = "Smith";
+//e2.eyeColor = "Green";
 
-e1.PrintName();
-e2.PrintName();
+//e1.PrintName();
+//e2.PrintName();
 
-e1.firstName = "Joe";
-e2.lastName = "Piscapoe";
+//e1.firstName = "Joe";
+//e2.lastName = "Piscapoe";
 
-e1.PrintName();
-e2.PrintName();
+//e1.PrintName();
+//e2.PrintName();
 
-string response = "NOTHING";
+//string response = "NOTHING";
 
-bool result = e1.Shout(out response);
+//bool result = e1.Shout(out response);
 
 
 
@@ -658,13 +658,58 @@ BankAccount ba1 = new BankAccount("Simon Stirling", 955555);
 BankAccount ba2 = new BankAccount("Joe Smith", 500);
 BankAccount ba3 = new BankAccount("Bob Marley", 1000);
 
+BankAccount ba4 = new BankAccount();
+
 BankAccount.GetName();
 BankAccount.SetName("SOME NEW NAME");
 BankAccount.BankName = "SOME NEW NAME";
-Console.WriteLine(BankAccount.BankName);
+//Console.WriteLine(BankAccount.BankName);
 
 MyFunctions.Add(1, 3);
 MyFunctions.Sqr(100);
+
+int res = ba1.Add(1, 2);
+
+//Console.WriteLine($"result: {res}");
+
+
+int x = 1;
+
+int y = x;
+
+x = 2;
+
+
+BankAccount ba6 = new BankAccount("IM A SINGLE OBJ", 100);
+BankAccount ba7 = ba6;
+
+//ba6.DisplayAccountInfo();
+//ba7.DisplayAccountInfo();
+
+void DoActionOnAccount(BankAccount acc, decimal amountToAdd) {
+	acc.Deposit(amountToAdd);
+}
+
+DoActionOnAccount(ba6, 50);
+
+//ba6.DisplayAccountInfo();
+//ba7.DisplayAccountInfo();
+
+
+int a = 10;
+int b = 20;
+
+int AddTwoNumbers(int val1, ref int val2) {
+	val2 += 12;
+	return val1 + val2;
+}
+
+int sum = AddTwoNumbers(a, ref b);
+
+Console.WriteLine($"a: {a}");
+Console.WriteLine($"b: {b}");
+Console.WriteLine($"sum: {sum}");
+
 
 //ba1.AccountHolderName = "SIMON IS COOL!!!";
 //ba1.SetAccountHolderName("SIMON IS COOL!!!");
@@ -692,9 +737,9 @@ MyFunctions.Sqr(100);
 
 //BankAccount.bankName = "My New Bank";
 
-ba1.DisplayAccountInfo();
-ba2.DisplayAccountInfo();
-ba3.DisplayAccountInfo();
+//ba1.DisplayAccountInfo();
+//ba2.DisplayAccountInfo();
+//ba3.DisplayAccountInfo();
 
 
 Console.ReadLine();
